@@ -1,0 +1,32 @@
+---
+title: "Developing Data Products - Week 3 Assignment (R Markdown Presentation & Plotly)"
+author: "Kyle Kaicheng Bao"
+date: "7/14/2019"
+output: ioslides_presentation
+---
+
+## R Markdown & Plotly
+
+This is a demo R Markdown presentation containing an interactive plot created using the `plotly` package.
+
+The `volcano` dataset contains topographic information on Auckland's Maunga Whau volcano. It is a matrix with 87 rows and 61 columns, rows corresponding to grid lines running east to west and columns to grid lines running south to north. We will visualise this data using `plotly`.
+
+---
+
+```{r, echo = FALSE, message = FALSE, out.width = "100%", out.height = "100%"}
+library(plotly)
+data(volcano)
+
+p1 <- plot_ly(z = ~volcano, type = "contour") %>% layout(title = "Contour Plot")
+p1
+```
+
+
+---
+
+```{r, echo = FALSE, message = FALSE, out.width = "100%", out.height = "100%"}
+p2 <- plot_ly(z = ~volcano) %>% add_surface() %>% layout(title = "3D Surface Plot")
+p2
+```
+
+## Thank You
