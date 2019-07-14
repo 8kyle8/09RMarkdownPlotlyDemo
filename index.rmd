@@ -13,7 +13,7 @@ The `volcano` dataset contains topographic information on Auckland's Maunga Whau
 
 ---
 
-```{r, echo = FALSE, message = FALSE, out.width = "100%", out.height = "100%"}
+```{r, echo = FALSE, message = FALSE}
 library(plotly)
 data(volcano)
 
@@ -24,7 +24,7 @@ p1
 
 ---
 
-```{r, echo = FALSE, message = FALSE, out.width = "100%", out.height = "100%"}
+```{r, echo = FALSE, message = FALSE}
 p2 <- plot_ly(z = ~volcano) %>% add_surface() %>% layout(title = "3D Surface Plot")
 p2
 ```
